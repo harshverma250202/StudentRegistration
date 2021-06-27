@@ -21,18 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         edittext1=findViewById(R.id.editTextTextPersonName);
-        edittext1=findViewById(R.id.editTextTextPersonName);
+        edittext2=findViewById(R.id.editTextTextPersonName2);
         button=findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name=edittext1.getText().toString();
-                String roll=edittext1.getText().toString();
+                String roll=edittext2.getText().toString();
                 Toast.makeText(MainActivity.this,  name+"  Succesfully Registered", Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(MainActivity.this,LogindisplayActivity.class);
-                i.putExtra("name",name);
-                i.putExtra("roll",roll);
+                i.putExtra("name_p",name);
+                i.putExtra("roll_p",roll);
                 startActivity(i);
+
 
             }
         });
